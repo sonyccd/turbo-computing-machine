@@ -1,0 +1,26 @@
+{
+  "resourceName": "coins",
+  "tableName": "coins",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "symbol",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "coins",
+      "partitionKey": {
+        "fieldName": "id",
+        "fieldType": "string"
+      },
+      "sortKey": {
+        "fieldName": "name",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

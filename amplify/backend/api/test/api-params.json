@@ -1,0 +1,42 @@
+{
+  "paths": [
+    {
+      "name": "/testing",
+      "lambdaFunction": "testAPI",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/testing"
+    }
+  ],
+  "resourceName": "test",
+  "apiName": "test",
+  "functionArns": [
+    {
+      "lambdaFunction": "testAPI"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-amplify0732705af8d34-staging-10804-authRole",
+    "unAuthRoleName": "amplify-amplify0732705af8d34-staging-10804-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "testAPI",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

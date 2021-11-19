@@ -1,4 +1,5 @@
-// in src/authProvider.js
+import { useAuth0 } from "@auth0/auth0-react";
+
 export default {
     // called when the user attempts to log in
     login: ({ username }) => {
@@ -8,7 +9,7 @@ export default {
     },
     // called when the user clicks on the logout button
     logout: () => {
-        localStorage.removeItem('username');
+
         return Promise.resolve();
     },
     // called when the API returns an error
